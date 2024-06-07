@@ -1,5 +1,6 @@
 # Use an amd64 architecture base image
 FROM --platform=linux/amd64 ubuntu:20.04
+ARG DEBIAN_FRONTEND=noninteractive
 # Install dependencies
 RUN apt-get update && \
     apt-get install -y software-properties-common curl git bzip2 openjdk-11-jre && \
